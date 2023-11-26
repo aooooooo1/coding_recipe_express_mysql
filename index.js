@@ -1,8 +1,36 @@
 import express from "express";
 
 const app = express();
-
+// json 데이터 받기 위해
+app.use(express.json());
 // 서버포트 : 8000 , localhost:8000
 app.listen(8000, ()=>{
     console.log('8000 서버 호출')
+})
+
+//기본주소요청 localhost:8000
+app.get("/", ()=>{
+    console.log("기본주소 요청했습니댜.");
+});
+
+app.get("/hello", ()=>{
+    console.log("hello 주소 요청함");
+})
+
+//쿼리스트링 받기
+app.get("/qs", (req)=>{
+    console.log(req.query);
+    console.log(req.query.p1);
+    console.log(req.query.p2);
+})
+
+app.post("/hello", ()=>{
+    console.log("/hello post 요청");
+})
+
+app.post("/post-req", (req)=>{
+    console.log(req.body);
+    console.log(req.body.name);
+    const {name, age} = req.body;
+    console.log(`name: ${name}, age: ${age}`);
 })

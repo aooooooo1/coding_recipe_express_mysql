@@ -12,3 +12,6 @@ npm install [이름: express, cors, json, body-parser, nodemon]
 # package.json 추가설정
 ### type : module 
 - node.js 의 모듈시스템을 ES6 를 사용할것입을 명시한다. require가 아닌(import, from)
+# api test
+- postman
+- REST Client (vs code extension)
