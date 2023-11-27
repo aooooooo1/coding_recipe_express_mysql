@@ -1,3 +1,4 @@
+###
 get http://localhost:8000/
 
 ###
@@ -19,3 +20,49 @@ Content-Type: application/json; charset=UTF-8
     "name": "이름입니다.",
     "age": 11
 }
+
+###
+post http://localhost:8000/save
+Content-Type: application/json; charset=UTF-8
+
+# {
+#     "name": "대한민국",
+#     "capital": "서울",
+#     "population": 52000000
+# }
+# {
+#     "name": "프랑스",
+#     "capital": "파리",
+#     "population": 72000000
+# }
+# {
+#     "name": "호주",
+#     "capital": "캔버라",
+#     "population": 25000000
+# }
+{
+    "name": "미국",
+    "capital": "워싱턴DC",
+    "population": 302000000
+}
+
+# 목록 조회하기
+###
+get http://localhost:8000/list
+
+###
+get http://localhost:8000/list/2
+
+###
+put http://localhost:8000/list/1
+Content-Type: application/json; charset=UTF-8
+
+{
+    "id": 1,
+    "name": "한국",
+    "capital": "서울",
+    "population": 50000000
+}
+
+### 
+delete http://localhost:8000/list/4
